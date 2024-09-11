@@ -10,13 +10,13 @@ Console.WriteLine(" |                  The result of the sequence above should y
 Console.WriteLine(" ------------------------------------------------------------------------------------------------------------");
 Console.WriteLine();
 
+Console.Write("Input your string: ");
 
 static void NumberFinderInAString()
     {
-    Console.Write("Input your string: ");
-
     var userInput = Console.ReadLine();
     Console.WriteLine();
+
     long totalSum = 0;
 
     for (int i = 0; i < userInput?.Length; i++)
@@ -35,20 +35,21 @@ static void NumberFinderInAString()
                 Console.WriteLine(userInput.Substring(j + 1));
 
                 totalSum = totalSum + long.Parse(numberHighlighter);
+                break;
                 }
             }
         }
     Console.WriteLine();
-    Console.Write($"The total sum of all substrings added together is: ");
 
     if (totalSum > 0)
         {
+        Console.Write($"The total sum of all substrings added together is: ");
         Console.ForegroundColor = ConsoleColor.Cyan;
         Console.Write(totalSum);
-
         }
     else
         {
+        Console.Write($"The program didnt find a number that coulde added together and therefor the result is: ");
         Console.ForegroundColor = ConsoleColor.Red;
         Console.Write(totalSum);
         }
@@ -58,9 +59,9 @@ static void NumberFinderInAString()
 
 static bool IsANumber(string userInput)
     {
-    foreach (char letter in userInput)
+    foreach (char number in userInput)
         {
-        if (!char.IsDigit(letter))
+        if (!char.IsDigit(number))
             {
             return false;
             }
