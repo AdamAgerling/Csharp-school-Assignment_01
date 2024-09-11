@@ -1,6 +1,6 @@
 ﻿
 
-// String to test: 29535123p48723487597645723645
+// String to test: 29535123p48723487597645723645 if you for some reason can't copy in the console.
 
 Console.WriteLine();
 Console.WriteLine(" ------------------------------------------------------------------------------------------------------------");
