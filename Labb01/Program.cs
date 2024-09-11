@@ -16,6 +16,7 @@ static void NumberFinderInAString()
     {
     var userInput = Console.ReadLine();
     Console.WriteLine();
+    Console.WriteLine("------------------------------------------------------");
 
     long totalSum = 0;
 
@@ -34,11 +35,13 @@ static void NumberFinderInAString()
                 Console.ResetColor();
                 Console.WriteLine(userInput.Substring(j + 1));
 
-                totalSum = totalSum + long.Parse(substringSequence);
+                totalSum += long.Parse(substringSequence);
                 break;
                 }
             }
         }
+    Console.WriteLine("------------------------------------------------------");
+
     Console.WriteLine();
 
     if (totalSum > 0)
