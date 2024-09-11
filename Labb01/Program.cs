@@ -23,18 +23,18 @@ static void NumberFinderInAString()
         {
         for (int j = i + 1; j < userInput?.Length; j++)
             {
-            string numberHighlighter = userInput.Substring(i, j - i + 1);
-            if (IsANumber(numberHighlighter) && numberHighlighter[0] == numberHighlighter[numberHighlighter.Length - 1])
+            string substringSequence = userInput.Substring(i, j - i + 1);
+            if (IsANumber(substringSequence) && substringSequence[0] == substringSequence[substringSequence.Length - 1])
                 {
                 Console.Write(userInput.Substring(0, i));
 
                 Console.ForegroundColor = ConsoleColor.DarkGreen;
-                Console.Write(numberHighlighter);
+                Console.Write(substringSequence);
 
                 Console.ResetColor();
                 Console.WriteLine(userInput.Substring(j + 1));
 
-                totalSum = totalSum + long.Parse(numberHighlighter);
+                totalSum = totalSum + long.Parse(substringSequence);
                 break;
                 }
             }
@@ -49,7 +49,7 @@ static void NumberFinderInAString()
         }
     else
         {
-        Console.Write($"The program didnt find a number that coulde added together and therefor the result is: ");
+        Console.Write($"The program could not find a number that could be added together and therefor the result is: ");
         Console.ForegroundColor = ConsoleColor.Red;
         Console.Write(totalSum);
         }
